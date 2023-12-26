@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:mydb   # to save on disk: jdbc:h2:file:c:/Temp/urlShortener;AUTO_SERVER=TRUE
+    username: user
+    password: pass
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+  jmx:
